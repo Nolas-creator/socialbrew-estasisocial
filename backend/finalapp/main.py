@@ -8,7 +8,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",              # desarrollo local
+        "https://socialbrew.onrender.com"     # frontend en producción
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
